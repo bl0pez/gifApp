@@ -7,6 +7,19 @@
     --bg-secondary: #242629;
 }
 
+/* ===Barra de scroll=== */
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-button);
+}
+
 /* ===Global=== */
 body {
     background-color: var(--bg-black);
@@ -17,7 +30,7 @@ body {
 .content{
     margin: 0 auto;
     width: clamp(300px, 90%, 1422px);
-    padding: 0 20px;
+    padding: 10px 20px;
 }
 
 .input{
@@ -50,4 +63,24 @@ body {
 
 .btn:hover{
     background-color: var(--bg-button-hover);
+}
+
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.card{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--bg-secondary);
+    text-align: center;
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
 }
