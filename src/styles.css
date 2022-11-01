@@ -1,0 +1,53 @@
+/* ===Variables=== */
+:root {
+    --bg-black: #16161a;
+    --bg-button: #7f5af0;
+    --bg-button-hover: #5e3dc2;
+    --bg-text: #fffffe;
+    --bg-secondary: #242629;
+}
+
+/* ===Global=== */
+body {
+    background-color: var(--bg-black);
+    color: var(--bg-text);
+    max-width: 100vw;
+}
+
+.content{
+    margin: 0 auto;
+    width: clamp(300px, 90%, 1422px);
+    padding: 0 20px;
+}
+
+.input{
+    background: var(--bg-secondary);
+    padding: 10px 10px 0 10px;
+    outline: none;
+    width: 100%;
+    color: var(--bg-text);
+    border: none;
+    border-bottom: 3px solid var(--bg-button);
+    font-size: 1.5rem;
+}
+
+.input::placeholder{
+    color: #94a1b2;
+}
+
+
+.btn{
+    background-color: var(--bg-button);
+    color: var(--bg-text);
+    padding: 8px;
+    cursor: pointer;
+    width: clamp(100px, 100%, 400px);
+    margin: 10px 0;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    background-color: var(--bg-button-hover);
+}
