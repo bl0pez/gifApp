@@ -6,12 +6,16 @@ export const GifApp = () => {
 
     const [categories, setCategories] = useState(['One Punch']);
 
-    const onAddCategory = ({ newCategory }) => {
+    const onAddCategory = ( newCategory ) => {
 
         //Si la categoría ya existe, no la agregamos
         if (categories.includes(newCategory)) return;
 
         setCategories([newCategory, ...categories]);
+    }
+
+    const onRemoveCategory = ( category ) => {
+        setCategories(categories.filter(c => c !== category));
     }
 
     return (
@@ -27,6 +31,7 @@ export const GifApp = () => {
                     <GifGrid
                         key={category}
                         category={category}
+                        onRemoveCategory={onRemoveCategory}
                     />
                 ))
             }

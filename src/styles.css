@@ -25,6 +25,7 @@ body {
     background-color: var(--bg-black);
     color: var(--bg-text);
     max-width: 100vw;
+    text-align: center;
 }
 
 .content{
@@ -48,21 +49,31 @@ body {
     color: #94a1b2;
 }
 
-
-.btn{
-    background-color: var(--bg-button);
-    color: var(--bg-text);
-    padding: 8px;
-    cursor: pointer;
-    width: clamp(100px, 100%, 400px);
-    margin: 10px 0;
-    border: none;
-    font-size: 1.5rem;
-    border-radius: 5px;
+.header-category{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
-.btn:hover{
-    background-color: var(--bg-button-hover);
+.title-category{
+    color: var(--bg-button);
+    font-size: 1.5rem;
+}
+
+.btn-remove{
+    background: var(--bg-button);
+    color: var(--bg-text);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-remove:hover{
+    background: var(--bg-button-hover);
 }
 
 .card-grid{

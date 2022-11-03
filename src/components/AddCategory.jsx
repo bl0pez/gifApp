@@ -15,7 +15,8 @@ export const AddCategory = ({ onNewCategory }) => {
             return;
         }
 
-        /* onNewCategory( inputValue.trim() ); */
+        onNewCategory(inputValue.toLowerCase()); 
+        setInputValue('');
     }
 
   return (
