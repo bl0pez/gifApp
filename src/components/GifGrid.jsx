@@ -1,5 +1,6 @@
 import { useFetchGifs } from "../hooks/useFetchGifs";
 import { GifItem } from "./GifItem";
+import { Loading } from "./Loading";
 
 export const GifGrid = ({ category, onRemoveCategory }) => {
 
@@ -18,13 +19,23 @@ export const GifGrid = ({ category, onRemoveCategory }) => {
                 </button>
             </div>
 
-            <div className='card-grid'>
-                {
-                    images.map(({ id, url, title }) => (
-                        <GifItem key={id} {...{ title, url }} />
-                    ))
-                }
-            </div>
+            {
+                isLoading
+                    ? (
+                        <div className="card-loading">
+                            <Loading />
+                        </div>
+                    )
+                    : (
+                        <div className='card-grid'>
+                            {
+                                images.map(({ id, url, title }) => (
+                                    <GifItem key={id} {...{ title, url }} />
+                                ))
+                            }
+                        </div>
+                    )
+            }
         </>
     )
 }
